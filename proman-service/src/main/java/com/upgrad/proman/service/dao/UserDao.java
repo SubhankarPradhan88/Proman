@@ -13,5 +13,9 @@ public class UserDao {
         entityManager.persist(userEntity); // Persistance takes place here
         return userEntity; // Now set with an valid ID by hybernate framework
     }
+
+    public UserEntity getUser(final String userUuid) {
+        return entityManager.createNamedQuery("userByUuid", UserEntity.class).setParameter("uuid", userUuid).getSingleResult();
+    }
 }
 
