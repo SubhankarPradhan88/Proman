@@ -4,18 +4,19 @@ server:
     contextPath: /api
 
 spring:
+
   application:
     name: proman-api
 
-datasource:
-  driverClassName: org.postgresql.Driver
-  url: jdbc:postgresql://localhost:5432/postgres
-  username: postgres
-  password: postgres
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
 
-jpa:
-  properties:
-    hibernate:
-      temp:
-        use_jdbc_metadata_defaults: false
-        database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect

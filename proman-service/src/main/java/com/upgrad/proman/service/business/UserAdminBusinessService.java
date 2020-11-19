@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserBusinessService {
+public class UserAdminBusinessService {
 
     @Autowired
     private UserDao userDao;
-
     public UserEntity getUser(final String userUuid){
         return userDao.getUser(userUuid);
     }
